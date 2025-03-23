@@ -1,3 +1,4 @@
+
 --Step 1: Create the customers Table in the Silver Layer
 CREATE TABLE IF NOT EXISTS `avd-databricks-demo.silver_dataset.customers`
 (
