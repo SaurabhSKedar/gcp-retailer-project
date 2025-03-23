@@ -4,6 +4,7 @@ from datetime import timedelta
 from airflow.utils.dates import days_ago
 from airflow.operators.dagrun_operator import TriggerDagRunOperator
 
+
 # Define default arguments
 ARGS = {
     "owner": "SHAIK SAIDHUL",
