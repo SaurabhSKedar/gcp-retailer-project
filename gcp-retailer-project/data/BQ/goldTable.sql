@@ -1,3 +1,4 @@
+
 --1️. Sales Summary (sales_summary)
 CREATE TABLE IF NOT EXISTS `avd-databricks-demo.gold_dataset.sales_summary`
 AS
