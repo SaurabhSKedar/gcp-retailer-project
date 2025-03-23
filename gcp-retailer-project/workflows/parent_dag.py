@@ -7,7 +7,7 @@ from airflow.operators.dagrun_operator import TriggerDagRunOperator
 
 # Define default arguments
 ARGS = {
-    "owner": "SHAIK SAIDHUL",
+    "owner": "SAURABH KEDAR",
     "start_date": days_ago(1),
     "depends_on_past": False,
     "email_on_failure": False,
