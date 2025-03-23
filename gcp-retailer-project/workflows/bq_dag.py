@@ -4,6 +4,7 @@ from datetime import timedelta
 from airflow.utils.dates import days_ago
 from airflow.providers.google.cloud.operators.bigquery import BigQueryInsertJobOperator
 
+
 # Define constants
 PROJECT_ID = "avd-databricks-demo"
 LOCATION = "US"
