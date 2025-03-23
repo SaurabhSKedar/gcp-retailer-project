@@ -1,3 +1,4 @@
+
 CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.orders`(
     order_id INT64,
     customer_id INT64,
