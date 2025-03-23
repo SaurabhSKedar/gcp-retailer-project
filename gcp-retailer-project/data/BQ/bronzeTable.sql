@@ -1,4 +1,3 @@
-
 CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.orders`(
     order_id INT64,
     customer_id INT64,
@@ -10,6 +9,7 @@ OPTIONS (
   format = 'JSON',
   uris = ['gs://datalake-project-bkt-19032025/landing/retailer-db/orders/*.json']
 );
+
 
 CREATE EXTERNAL TABLE IF NOT EXISTS `avd-databricks-demo.bronze_dataset.customers`
 (
