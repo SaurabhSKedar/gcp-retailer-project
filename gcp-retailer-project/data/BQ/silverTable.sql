@@ -169,7 +169,7 @@ TRUNCATE TABLE `saurabh-1111.silver_dataset.categories`;
 --Step 3: Insert New or Updated Records
 INSERT INTO `saurabh-1111.silver_dataset.categories`
 SELECT 
-  *,
+  *, 
   CASE 
     WHEN category_id IS NULL OR name IS NULL THEN TRUE
     ELSE FALSE
