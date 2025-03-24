@@ -41,6 +41,9 @@ with DAG(
         wait_for_completion=True,
     )
 
+
+    
+
 # Define dependencies
 trigger_pyspark_dag >> trigger_bigquery_dag
 
