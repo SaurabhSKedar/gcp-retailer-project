@@ -10,7 +10,6 @@ OPTIONS (
   uris = ['gs://datalake-project-bkt-23032025/landing/retailer-db/orders/*.json']
 );
 
-
 CREATE EXTERNAL TABLE IF NOT EXISTS `saurabh-1111.bronze_dataset.customers`
 (
     customer_id INT64,
@@ -22,7 +21,6 @@ OPTIONS (
     format = 'JSON',
     uris = ['gs://datalake-project-bkt-23032025/landing/retailer-db/customers/*.json']
 );
-
 
 CREATE EXTERNAL TABLE IF NOT EXISTS `saurabh-1111.bronze_dataset.products`
 (
@@ -110,6 +108,4 @@ OPTIONS (
   format = 'PARQUET',
   uris = ['gs://datalake-project-bkt-23032025/landing/customer_reviews/customer_reviews_*.parquet']
 );
-
-
 -------------------------------------------------------------------------------------------------------------
