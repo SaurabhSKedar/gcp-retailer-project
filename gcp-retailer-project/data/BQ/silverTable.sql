@@ -188,6 +188,7 @@ CREATE TABLE IF NOT EXISTS `saurabh-1111.silver_dataset.products`
   is_quarantined BOOL
 );
 
+
 --Step 2: Truncate table
 TRUNCATE TABLE `saurabh-1111.silver_dataset.products`;
 
