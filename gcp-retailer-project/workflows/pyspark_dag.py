@@ -14,7 +14,7 @@ from airflow.providers.google.cloud.operators.dataproc import (
 PROJECT_ID = "saurabh-1111"
 REGION = "us-east1"
 CLUSTER_NAME = "my-demo-cluster"
-COMPOSER_BUCKET = "us-central1-demo-composer-09835e4e-bucket"
+COMPOSER_BUCKET = " us-central1-demo-composer-1c7f0cdb-bucket"
 
 GCS_JOB_FILE_1 = f"gs://{COMPOSER_BUCKET}/data/INGESTION/retailerMysqlToLanding.py"
 PYSPARK_JOB_1 = {
@@ -97,3 +97,4 @@ with DAG(
 
 # define the task dependencies
 start_cluster >> pyspark_task_1 >> pyspark_task_2 >> pyspark_task_3 >> stop_cluster
+
