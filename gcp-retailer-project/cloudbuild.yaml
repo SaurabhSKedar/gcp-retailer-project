@@ -1,20 +1,11 @@
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['dataproc', 'clusters', 'create', 'my-demo-cluster',
-         '--region=us-east1',
-         '--num-workers=2',
-         '--worker-machine-type=n1-standard-2',
-         '--worker-boot-disk-size=50',
-         '--master-machine-type=n1-standard-2',
-         '--master-boot-disk-size=50',
-         '--image-version=2.0-debian10',
-         '--enable-component-gateway',
-         '--optional-components=JUPYTER',
-         '--initialization-actions=gs://goog-dataproc-initialization-actions-us-east1/connectors/connectors.sh',
-         '--metadata=bigquery-connector-version=1.2.0',
-         '--metadata=spark-bigquery-connector-version=0.21.0']
 
- # Step 2: Run the script to upload DAGs and Data to Composer bucket
+  # Step 1: Install Python dependencies
+  - name: 'python'
+    entrypoint: pip
+    args: ["install", "-r", "utils/requirements.txt", "--user"]
+
+  # Step 2: Run the script to upload DAGs and Data to Composer bucket
   - name: 'python'
     entrypoint: python
     args:
@@ -26,9 +17,12 @@ steps:
 options:
   logging: CLOUD_LOGGING_ONLY
 
-
 substitutions:
   _DAGS_DIRECTORY: "workflows/"
   _DAGS_BUCKET: "us-central1-demo-composer-09835e4e-bucket"
   _DATA_DIRECTORY: "data/"
+
+
+
+
 
