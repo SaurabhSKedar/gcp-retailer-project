@@ -23,6 +23,7 @@ OPTIONS (
     uris = ['gs://datalake-project-bkt-23032025/landing/retailer-db/customers/*.json']
 );
 
+
 CREATE EXTERNAL TABLE IF NOT EXISTS `saurabh-1111.bronze_dataset.products`
 (
     product_id INT64,
@@ -36,6 +37,7 @@ OPTIONS (
     uris = ['gs://datalake-project-bkt-23032025/landing/retailer-db/products/*.json']
 );
 
+
 CREATE EXTERNAL TABLE IF NOT EXISTS `saurabh-1111.bronze_dataset.categories`
 (
     category_id INT64,
@@ -46,6 +48,7 @@ OPTIONS (
     format = 'JSON',
     uris = ['gs://datalake-project-bkt-23032025/landing/retailer-db/categories/*.json']
 );
+
 
 CREATE EXTERNAL TABLE IF NOT EXISTS `saurabh-1111.bronze_dataset.order_items`
 (
@@ -60,6 +63,7 @@ OPTIONS (
     format = 'JSON',
     uris = ['gs://datalake-project-bkt-23032025/landing/retailer-db/order_items/*.json']
 );
+
 -------------------------------------------------------------------------------------------------------------
 -- Suppliers Table
 CREATE EXTERNAL TABLE IF NOT EXISTS `saurabh-1111.bronze_dataset.suppliers` (
@@ -78,6 +82,7 @@ OPTIONS (
   uris = ['gs://datalake-project-bkt-23032025/landing/supplier-db/suppliers/*.json']
 );
 
+
 -- Product Suppliers Table (Mapping suppliers to products)
 CREATE EXTERNAL TABLE IF NOT EXISTS `saurabh-1111.bronze_dataset.product_suppliers` (
     supplier_id INT64,
@@ -89,6 +94,7 @@ OPTIONS (
   format = 'JSON',
   uris = ['gs://datalake-project-bkt-23032025/landing/supplier-db/product_suppliers/*.json']
 );
+
 
 -------------------------------------------------------------------------------------------------------------
 
@@ -104,5 +110,6 @@ OPTIONS (
   format = 'PARQUET',
   uris = ['gs://datalake-project-bkt-23032025/landing/customer_reviews/customer_reviews_*.parquet']
 );
+
 
 -------------------------------------------------------------------------------------------------------------
